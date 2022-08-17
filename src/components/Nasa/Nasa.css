@@ -1,0 +1,53 @@
+.nasa {
+    background: url('../../assets/nasa-Yj1M5riCKk4-unsplash.jpg') center center/cover no-repeat;
+    color: var(--white);
+}
+
+.nasa-titulo {
+    margin: 0 1rem;
+    color: gray;
+    font-size: small;
+}
+
+.nasa-card-wrapper {
+    margin: 1rem auto 0;
+    padding: 1rem;
+    max-width: 100%;
+}
+
+.nasa-card {
+    margin: auto;
+    padding: 1rem 0;
+    max-width: 600px;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--main-gradient-05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+
+    text-shadow: 1px 1px 4px var(--black);
+}
+
+.nasa-card h1 {
+    text-align: center;
+    margin-top: 25px;
+    line-height: 2rem;
+}
+
+.nasa-card img {
+    width: 80%;
+    max-width: 400px;
+    margin: 1rem 0;
+}
+
+.nasa-card p {
+    margin: 1rem 1rem;
+    max-width: 90%;
+    width: 75ch;
+}
