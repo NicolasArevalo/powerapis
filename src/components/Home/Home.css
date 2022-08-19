@@ -1,7 +1,11 @@
 .home {
 
- background: rgb(251,199,212);
-background: linear-gradient(120deg, rgba(251,199,212,1) 2%, rgba(151,150,240,1) 85%);
+/*  background: rgb(251,199,212);
+background: linear-gradient(120deg, rgba(251,199,212,1) 2%, rgba(151,150,240,1) 85%); */
+
+  background-image: url('../../assets/gradient-2.png');
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /* .home-card {

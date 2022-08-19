@@ -1,73 +1,39 @@
-import React from 'react'
+import { useState } from 'react'
 import { tw } from 'https://cdn.skypack.dev/twind'
 
-import { useCharacter, useEpisode, useLocation } from '../../hooks/rnm'
+import './Rnm.css'
+import Characters from './components/Characters'
+import Episodes from './components/Episodes'
+import Locations from './components/Locations'
 
 const RnM = () => {
 
-  const { data: dataCharacter, loading: loadingCharacter } = useCharacter()
-  const { data: dataEpisode, loading: loadingEpisode } = useEpisode()
-  const { data: dataLocation, loading: loadingLocation } = useLocation()
+  const [ state, setState ] = useState(0)
 
   return (
-    <>
+    <main id="RnM-container">
 
-      <nav className='w-full my-2'>
+      <nav className='w-full my-2 bg-transparent text-sm sm:text-base'>
         <ul className='flex justify-around'>
-          <li className='cursor-pointer hover:border-blue-300 border-2 transition border-solid border-gray-300 rounded-full py-1 px-3'>Characters</li>
-          <li className='cursor-pointer hover:border-blue-300 border-2 transition border-solid border-gray-300 rounded-full py-1 px-3'>Locations</li>
-          <li className='cursor-pointer hover:border-blue-300 border-2 transition border-solid border-gray-300 rounded-full py-1 px-3'>Episodes</li>
+          <li
+          onClick={() => setState(0)} 
+          className='cursor-pointer hover:border-blue-300 border-2 transition border-solid border-gray-300 rounded-full py-1 px-3'>Characters</li>
+          <li 
+          onClick={() => setState(1)} 
+          className='cursor-pointer hover:border-blue-300 border-2 transition border-solid border-gray-300 rounded-full py-1 px-3'>Locations</li>
+          <li
+          onClick={() => setState(2)}  
+          className='cursor-pointer hover:border-blue-300 border-2 transition border-solid border-gray-300 rounded-full py-1 px-3'>Episodes</li>
         </ul>
       </nav>
 
-      {loadingCharacter && <h1>Cargando</h1>}
-      <div className='mt-5 grid grid-cols-3 gap-2 w-full max-w-[600px] m-auto justify-center'>
-        {dataCharacter.map(el => (
-          <div className='bg-gray-200 flex flex-col items-center justify-center' key={el.id}>
-            <img src={el.image} alt={el.name} className='max-w-full object-cover flex-grow' />
-            <div className="text">
-              <h2 className='text-gray-800 font-bold text-center border-b border-red-900'>{el.name}</h2>
-              <h4 className='text-gray-700'>{el.species}</h4>
-              <span>Status: {el.status}</span>
-            </div>
-          </div>
-        ))}
-      </div>
-      <nav onClick={() => alert('aún no sirve bro xD')} className='cursor-pointer mx-auto'>1 2 3 4 5 6 7 </nav>
+      { state === 0 ? <Characters /> : null}
+      { state === 1 ? <Locations /> : null}
+      { state === 2 ? <Episodes /> : null}
 
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-      {loadingEpisode && <h1>Cargando</h1>}
-      <div className='mt-5 grid grid-cols-3 gap-2 w-full max-w-[600px] m-auto justify-center'>
-        {dataEpisode.map(el => (
-          <div className='bg-gray-200 flex flex-col items-center justify-center' key={el.id}>
-            <div className="text">
-              <h2 className='text-gray-800 font-bold text-center border-b border-red-900'>{el.name}</h2>
-              <h4 className='text-gray-700'>{el.air_date}</h4>
-              <span>Episode: {el.episode}</span>
-            </div>
-          </div>
-        ))}
-
-      </div>
-
-      {loadingLocation && <h1>Cargando</h1>}
-      <div className='mt-5 grid grid-cols-3 gap-2 w-full max-w-[600px] m-auto justify-center'>
-        {dataLocation.map(el => (
-          <div className='bg-gray-200 flex flex-col items-center justify-center' key={el.id}>
-            <div className="text">
-              <h2 className='text-gray-800 font-bold text-center border-b border-red-900'>{el.name}</h2>
-              <h4 className='text-gray-700'>{el.type}</h4>
-              <span>Dimension: {el.dimension}</span>
-            </div>
-          </div>
-        ))}
-
-      </div>
-
-
-
-
-    </>
+    </main>
   )
 }
 

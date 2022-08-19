@@ -16,9 +16,10 @@ const Navbar = () => {
                 <aside className='layoutNavbar h-screen'>
                     <ul className='h-4/5 mt-4 flex flex-col justify-around font-light text-2xl'>
                         <li onClick={handleClick}> <Link to='/'>Inicio</Link> </li>
-                        <li onClick={handleClick}> <Link to='/nasa'>Nasa</Link> </li>
                         <li onClick={handleClick}> <Link to='/marvel'>Marvel</Link> </li>
+                        <li onClick={handleClick}> <Link to='/nasa'>Nasa</Link> </li>
                         <li onClick={handleClick}> <Link to='/rickandmorty'>Rick and Morty</Link> </li>
+                        <li onClick={handleClick}> <Link to='/valorant'>Valorant</Link> </li>
                         {/* <li onClick={handleClick}> <Link to='/instagram'>Instagram</Link> </li> */}
                     </ul>
 

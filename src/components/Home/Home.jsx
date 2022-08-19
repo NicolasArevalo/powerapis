@@ -7,15 +7,16 @@ const Home = () => {
     return (
         <div className="home h-screen grid place-content-center">
             <div className="h-4/5 p-6 text-gray-800 font-light">
-                <h1 className='text-6xl'>Powerapis</h1>
+                <h1 className='text-6xl font-bold'>Powerapis</h1>
                 <p className='my-2'>Website creado por 
                     <a href="https://niiico.com" className='m-1 underline'>Nico</a>
                  para reunir todos sus proyectos con APIs en uno.</p>
                 <nav>
-                    <ul className='text-3xl'>
-                        <li className='mb-4 text-right'><Link to='/nasa'> Nasa <i className="fa-solid fa-rocket"></i></Link></li>
-                        <li className='mb-4 text-right'><Link to='/marvel'> Marvel <i className="fa-solid fa-rocket"></i></Link></li>
-                        <li className='mb-4 text-right'><Link to='/rickandmorty'> Rick and Morty <i className="fa-solid fa-rocket"></i></Link></li>
+                    <ul className='text-3xl m-6'>
+                        <li className='mb-4'><Link to='/nasa'> Nasa <i className="fa-solid fa-rocket"></i></Link></li>
+                        <li className='mb-4'><Link to='/marvel'> Marvel <i className="fa-solid fa-rocket"></i></Link></li>
+                        <li className='mb-4'><Link to='/rickandmorty'> Rick and Morty <i className="fa-solid fa-rocket"></i></Link></li>
+                        <li className='mb-4'><Link to='/Valorant'> Valorant <i className="fa-solid fa-rocket"></i></Link></li>
                     </ul>
                 </nav>
             </div>
