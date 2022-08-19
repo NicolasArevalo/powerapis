@@ -7,10 +7,10 @@ const Nasa = lazy(() => import('./components/Nasa/Nasa'))
 const Instagram = lazy(() => import('./components/Instagram/Instagram'))
 const Marvel = lazy(() => import('./components/Marvel/Marvel'))
 const RnM = lazy(() => import('./components/RnM/RnM'))
+const Valorant = lazy(() => import('./components/Valorant/Valorant'))
 
 import Loading from './components/Loading/Loading'
 import Navbar from './components/Navbar/Navbar'
-
 
 function App() {
 
@@ -26,6 +26,7 @@ function App() {
             <Route path="instagram" element={<Instagram />} />
             <Route path="marvel" element={<Marvel />} />
             <Route path="rickandmorty" element={<RnM />} />
+            <Route path="valorant" element={<Valorant />} />
           </Route>
 
           <Route path='*' element={<NotFound />} />
