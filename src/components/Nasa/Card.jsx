@@ -1,5 +1,3 @@
-import './Nasa.css'
-
 const Card = ( {copyright, date, explanation, title, url} ) => {
   return (
     <div className='nasa-card'>

@@ -1,0 +1,160 @@
+#RnM-container {
+    background-image: url('../../assets/gradient-2.png');
+    background-attachment: fixed;
+    background-position: center;
+
+    nav {
+        width: 100%;
+        margin-top: 1rem;
+
+        ul {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+
+        }
+    }
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    width: 90%;
+    gap: 1.2rem;
+    margin: auto;
+
+    &>div {
+        display: flex;
+        flex-flow: column wrap;
+        border: 3px solid var(--black);
+        background: var(--white);
+        position: relative;
+
+        &>img {
+            min-width: 100px;
+            max-width: 100%;
+        }
+
+        .text {
+            display: flex;
+            flex-flow: column wrap;
+            flex-grow: 1;
+            justify-content: center;
+
+            h2,
+            h4 {
+                text-align: center;
+                font-size: .9rem;
+                margin: 5px 10px 5px 10px;
+            }
+
+            #timesOnScreen-wrapper {
+                position: absolute;
+                width: 30%;
+                top: unset;
+                bottom: -6px;
+                right: -23px;
+
+                #timesOnScreen {
+                    transform: unset;
+                    position: unset;
+                    top: unset;
+                }
+
+                &:hover::after {
+                    display: flex;
+                }
+
+                &::after {
+                    content: 'Times on screen';
+                    background-color: #209cee;
+                    padding: 3px;
+                    border-radius: 3px;
+                    position: absolute;
+                    left: -9.2rem;
+                    top: -1.6rem;
+                    display: none;
+                }
+            }
+
+            span {
+                font-size: .7rem;
+                width: 65%;
+                height: auto;
+                text-align: center;
+                transform: translateX(-3px);
+                position: absolute;
+                top: -7px;
+            }
+        }
+    }
+}
+
+.cards-episodes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    width: 90%;
+    gap: 1.2rem;
+    margin: auto;
+
+    .card {
+        border: 3px solid var(--black);
+        background: var(--white);
+        position: relative;
+        padding: .3rem;
+        transition: .3s ease;
+        overflow-wrap: break-word;
+        hyphens: manual;
+        
+
+        &:hover {
+            z-index: 1;
+        }
+
+        h2 {}
+
+        h4 {}
+
+        .badgeWrapper {
+            position: absolute;
+            width: 30%;
+            top: unset;
+            top: 6px;
+            left: 100%;
+
+            span {
+                
+
+                &:hover::after {
+                    display: flex;
+                }
+
+                &::after {
+                    content: 'Episode';
+                    background-color: #209cee;
+                    padding: 3px;
+                    border-radius: 3px;
+                    position: absolute;
+                    left: -4.2rem;
+                    top: 1.6rem;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 860px) {
+    nav {
+        ul {
+
+            li {
+                transform: scale(.8);
+            }
+
+        }
+    }
+
+}

@@ -1,5 +1,5 @@
 import { useImgOfDay } from '../../hooks/nasa/useImgOfDay'
-import './Nasa.css'
+import './Nasa.scss'
 
 import Loading from '../Loading/Loading'
 import Card from './Card'

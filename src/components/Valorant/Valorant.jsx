@@ -14,7 +14,7 @@ const Valorant = () => {
 
 
     return (
-        <main id="Valorant-container">
+        <main className="container">
             <nav className='w-full my-2 bg-transparent text-sm sm:text-base'>
                 <ul className='flex justify-around'>
                     <li

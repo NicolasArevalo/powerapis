@@ -1,26 +1,35 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import MiniLoading from '../Loading/MiniLoading'
 
-import './Home.css'
+import './Home.scss'
 
 const Home = () => {
     return (
-        <div className="home h-screen grid place-content-center">
-            <div className="h-4/5 p-6 text-gray-800 font-light">
-                <h1 className='text-6xl font-bold'>Powerapis</h1>
-                <p className='my-2'>Website creado por 
-                    <a href="https://niiico.com" className='m-1 underline'>Nico</a>
-                 para reunir todos sus proyectos con APIs en uno.</p>
+        <div className="container container-home">
+            <div className="home">
+                <h1 className='nes-text is-primary'>Powerapis</h1>
+                <p className=''>Website creado por
+                    <a href="https://niiico.com" className='nes-btn is-success'><i class="nes-icon coin is-small"></i> Nico</a>
+                    para reunir todos sus proyectos con APIs en uno.</p>
                 <nav>
-                    <ul className='text-3xl m-6'>
-                        <li className='mb-4'><Link to='/nasa'> Nasa <i className="fa-solid fa-rocket"></i></Link></li>
-                        <li className='mb-4'><Link to='/marvel'> Marvel <i className="fa-solid fa-rocket"></i></Link></li>
-                        <li className='mb-4'><Link to='/rickandmorty'> Rick and Morty <i className="fa-solid fa-rocket"></i></Link></li>
-                        <li className='mb-4'><Link to='/Valorant'> Valorant <i className="fa-solid fa-rocket"></i></Link></li>
+                    <ul className=''>
+                        <li ><Link className='nes-btn is-primary' to='/nasa' > Nasa <i className="fa-solid fa-rocket"></i></Link></li>
+                        <li ><Link className='nes-btn is-primary' to='/marvel'> Marvel <i className="fa-solid fa-rocket"></i></Link></li>
+                        <li ><Link className='nes-btn is-primary' to='/rickandmorty'> Rick and Morty <i className="fa-solid fa-rocket"></i></Link></li>
+                        <li ><Link className='nes-btn is-primary' to='/Valorant'> Valorant <i className="fa-solid fa-rocket"></i></Link></li>
                     </ul>
                 </nav>
+                <section>
+                    <h3>Social media</h3>
+                    <section class="icon-list">
+                        <a href="https://twitter.com/lunago28"><i class="nes-icon twitter is-medium"></i></a>
+                        <a href="https://github.com/NicolasArevalo"><i class="nes-icon github is-medium"></i></a>
+                        <a href="https://linkedin.com/in/nicolás-arévalo-842839188/"><i class="nes-icon linkedin is-medium"></i></a>
+                    </section>
+                </section>
             </div>
-            <footer className='fixed bottom-0 left-0 right-0 py-2 bg-transparent text-center'><span>Este sitio is under construction yet, no me juzgues mano</span></footer>
+            <footer className='nes-container with-title is-centered'><span>Este sitio is under construction yet, no me juzgues mano</span></footer>
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
-import './Navbar.css'
+import './Navbar.scss'
 
 const Navbar = () => {
 
@@ -12,9 +12,9 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className='wrapper_layoutNavbar pl-16'>
-                <aside className='layoutNavbar h-screen'>
-                    <ul className='h-4/5 mt-4 flex flex-col justify-around font-light text-2xl'>
+            <nav className='wrapper_layoutNavbar'>
+                <aside className='layoutNavbar '>
+                    <ul className=''>
                         <li onClick={handleClick}> <Link to='/'>Inicio</Link> </li>
                         <li onClick={handleClick}> <Link to='/marvel'>Marvel</Link> </li>
                         <li onClick={handleClick}> <Link to='/nasa'>Nasa</Link> </li>
@@ -23,19 +23,28 @@ const Navbar = () => {
                         {/* <li onClick={handleClick}> <Link to='/instagram'>Instagram</Link> </li> */}
                     </ul>
 
+                    <section className="icon-list">
+                        <a href="https://niiico.com"><i className="nes-icon coin is-medium"></i></a>
+                        <a href="https://twitter.com/lunago28"><i className="nes-icon twitter is-medium"></i></a>
+                        <a href="https://github.com/NicolasArevalo"><i className="nes-icon github is-medium"></i></a>
+                        <a href="https://linkedin.com/in/nicolás-arévalo-842839188/"><i className="nes-icon linkedin is-medium"></i></a>
+                    </section>
+
                 </aside>
 
-                <button className='btn-cerrar' onClick={handleClick}>
-                    <i className="fa-solid fa-caret-left p-2 bg-red-200 m-1"></i>
+                <button className='btn-cerrar btn-navbar' onClick={handleClick}>
+                    <span>{'<'}</span>
                 </button>
 
             </nav>
-            <button className='btn-abrir' onClick={handleClick}>
-                    <i className="fa-solid fa-caret-right p-2 bg-red-200 m-1"></i>
+            <button className='btn-abrir btn-navbar' onClick={handleClick}>
+                <span>{'>'}</span>
             </button>
             <Outlet />
 
-            <footer className='fixed bottom-0 left-0 right-0 py-2 text-center'><span>Este sitio is under construction yet, no me juzgues mano</span></footer>
+            <footer className='nes-container with-title is-centered'>
+                <p>Este sitio está under construction, no me juzgues mano.</p>
+            </footer>
         </>
     )
 }

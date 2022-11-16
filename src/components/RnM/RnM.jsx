@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { tw } from 'https://cdn.skypack.dev/twind'
 
-import './Rnm.css'
+import './Rnm.scss'
 import Characters from './components/Characters'
 import Episodes from './components/Episodes'
 import Locations from './components/Locations'
@@ -13,17 +13,17 @@ const RnM = () => {
   return (
     <main id="RnM-container">
 
-      <nav className='w-full my-2 bg-transparent text-sm sm:text-base'>
-        <ul className='flex justify-around'>
+      <nav className=''>
+        <ul className=''>
           <li
           onClick={() => setState(0)} 
-          className='cursor-pointer hover:border-blue-300 border-2 transition border-solid border-gray-300 rounded-full py-1 px-3'>Characters</li>
+          className='nes-btn is-warning'>Characters</li>
           <li 
           onClick={() => setState(1)} 
-          className='cursor-pointer hover:border-blue-300 border-2 transition border-solid border-gray-300 rounded-full py-1 px-3'>Locations</li>
+          className='nes-btn is-warning'>Locations</li>
           <li
           onClick={() => setState(2)}  
-          className='cursor-pointer hover:border-blue-300 border-2 transition border-solid border-gray-300 rounded-full py-1 px-3'>Episodes</li>
+          className='nes-btn is-warning'>Episodes</li>
         </ul>
       </nav>
 

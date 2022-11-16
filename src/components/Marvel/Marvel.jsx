@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useCharacter } from '../../hooks/marvel/useCharacter'
 
-import Loading from '../Loading/Loading'
+import MiniLoading from '../Loading/MiniLoading'
 import Personaje from './Personaje'
 import Busqueda from './Busqueda'
 
@@ -32,7 +32,7 @@ const Marvel = () => {
 
         <>
 
-            {loading && <Loading />}
+            {loading && <MiniLoading />}
 
             <h1>Personajes de Marvel</h1>
 

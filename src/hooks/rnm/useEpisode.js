@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { getEpisode } from '../../services/rnm/';
 
-export const useEpisode = () => {
+export const useEpisode = (next= '') => {
 
     const [state, setState] = useState({
-        data: [],
+        data: {},
         loading: true
     });
 
@@ -12,7 +12,7 @@ export const useEpisode = () => {
         
         async function traerInfo () {
             setState( { 
-                data: await getEpisode(), 
+                data: await getEpisode(next), 
                 loading: false
             })
         }

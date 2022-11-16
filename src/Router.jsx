@@ -27,6 +27,7 @@ function App() {
             <Route path="marvel" element={<Marvel />} />
             <Route path="rickandmorty" element={<RnM />} />
             <Route path="valorant" element={<Valorant />} />
+            <Route path="loading" element={<Loading />} />
           </Route>
 
           <Route path='*' element={<NotFound />} />

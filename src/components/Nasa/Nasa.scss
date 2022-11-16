@@ -1,12 +1,12 @@
 .nasa {
-    background: url('../../assets/nasa-Yj1M5riCKk4-unsplash.jpg') center center/cover no-repeat;
-    color: var(--white);
+    color: var(--black);
 }
 
 .nasa-titulo {
-    margin: 0 1rem;
+    margin: 1rem 1rem 0;
     color: gray;
     font-size: small;
+    text-align: center;
 }
 
 .nasa-card-wrapper {
@@ -25,13 +25,6 @@
     justify-content: center;
     align-items: center;
 
-    background: var(--main-gradient-05);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-
-    text-shadow: 1px 1px 4px var(--black);
 }
 
 .nasa-card h1 {
@@ -50,4 +43,8 @@
     margin: 1rem 1rem;
     max-width: 90%;
     width: 75ch;
+}
+
+@media (max-width: 860px){
+
 }

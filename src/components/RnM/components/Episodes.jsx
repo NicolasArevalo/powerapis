@@ -1,28 +1,37 @@
-import React from 'react'
+import { useEffect } from 'react'
 
 import { useEpisode } from '../../../hooks/rnm'
+import MiniLoading from '../../Loading/MiniLoading'
 
 const Episodes = () => {
 
-    const { data: dataEpisode, loading: loadingEpisode } = useEpisode()
+	const { data: dataEpisode, loading: loadingEpisode } = useEpisode()
+	useEffect(() => {
 
-    return (
-        <main>
-            {loadingEpisode && <h1>Cargando</h1>}
-            <div id="card" className='mt-5 grid gap-2 w-full max-w-[600px] m-auto justify-center'>
-                {dataEpisode.map(el => (
-                    <div className='rounded-md bg-gray-100 border border-white py-2 px-6 flex flex-col items-center justify-center' key={el.id}>
-                        <div className="text">
-                            <h2 className='text-gray-800 font-bold text-center border-b border-red-900'>{el.name}</h2>
-                            <h4 className='text-gray-700'>{el.air_date}</h4>
-                            <span>Episode: {el.episode}</span>
-                        </div>
-                    </div>
-                ))}
+	}, [])
+	
+	const handleNext = () =>{
 
-            </div>
-        </main>
-    )
+	}
+
+	return (
+		<>
+			{loadingEpisode && <MiniLoading />}
+			<main className='cards-episodes'>
+				{dataEpisode.data.map(el => (
+					<div className='card' key={el.id}>
+						<h2 className=''>{el.name}</h2>
+						<h4 className=''>{el.air_date}</h4>
+						<div className='badgeWrapper nes-badge is-icon'>
+							<span className='is-primary'>{el.episode}</span>
+						</div>
+					</div>
+				))}
+			</main>
+			<p>Total episodes: {dataEpisode.total}</p>
+			<button onClick={handleNext}>{'>'}</button>
+		</>
+	)
 }
 
 export default Episodes

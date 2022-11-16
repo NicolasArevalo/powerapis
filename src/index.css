@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -10,44 +10,6 @@
 
   --white: #fff;
   --black: #333;
---font-color: rgb(23, 35, 90);
-  --azul-oscuro: #004d7a;
-  --azul-claro: #008793;
-
-  --verde-oscuro-rgb: 0, 191, 114;
-  --verde-oscuro: #00bf72;
-
-  --verde-claro: #a8eb12;
-
-  --primary400: #41436A;
-  --primary400-rgb: 65, 67, 106;
-  --primary300: #974063;
-  --primary300-rgb: 151, 64, 99;
-  --primary200: #F54768;
-  --primary200-rgb: 245, 71, 104;
-  --primary100: #FF9677;
-  --primary100-rgb: 255, 150, 119;
-
-  --simple-gradient: linear-gradient(120deg, rgba(65, 67, 106, 1) 2%, rgba(151, 64, 99, 1) 85%);
-
-  --main-gradient: linear-gradient(120deg,
-      rgba(var(--primary400-rgb), 1) 0%,
-      rgba(var(--primary300-rgb), 1) 31%,
-      rgba(var(--primary200-rgb), 1) 71%,
-      rgba(var(--primary100-rgb), 1) 100%);
-
-  --main-gradient-05: linear-gradient(120deg,
-      rgba(var(--primary400-rgb), 0.5) 0%,
-      rgba(var(--primary300-rgb), 0.5) 31%,
-      rgba(var(--primary200-rgb), 0.5) 71%,
-      rgba(var(--primary100-rgb), 0.5) 100%);
-
-  --secondary-gradient: linear-gradient(120deg,
-      rgba(251, 199, 212, 1) 2%,
-      rgba(151, 150, 240, 1) 85%);
-
-
-
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -62,6 +24,17 @@
   box-sizing: border-box;
 }
 
+html, body, pre, code, kbd, samp {
+  font-family: "Press Start 2P";
+}
+
+footer{
+  width: 80%;
+  margin: auto;
+  position: absolute;
+  bottom: 10px;
+}
+
 h1,
 h2,
 h3,
@@ -71,6 +44,16 @@ h6 {
   margin-bottom: .8rem;
 }
 
+.container {
+  background-image: url('./assets/gradient-2.png');
+  background-attachment: fixed;
+  background-position: center;
+
+  min-height: 100vh;
+  padding: 2rem 3rem;
+  position: relative;
+}
+
 a {
   color: inherit;
   text-underline-offset: 3px;
@@ -78,6 +61,11 @@ a {
 
 a:visited {
   color: inherit;
+}
+
+a:hover{
+  text-decoration: none;
+  border-bottom: 3px solid black;
 }
 
 li {
@@ -102,11 +90,22 @@ input {
 
 }
 
-/* i {
-  color: white;
-  fill: #a7f3d0;
-} */
+@media (max-width: 860px) {
+  
+  :root{
+    font-size: 12px;
+  }
 
-/* input:active{
-  border: none;
-} */
+  main{
+    font-size: x-small;
+  }
+
+  footer{
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    bottom: 10px;
+    font-size: xx-small;
+  }
+  
+}

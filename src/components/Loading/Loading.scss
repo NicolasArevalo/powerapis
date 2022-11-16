@@ -1,0 +1,30 @@
+.loading-wrapper {
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.miniloading-wrapper{
+    animation: rotating 5s infinite linear;
+}
+
+@keyframes rotating {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(359deg);
+    }
+
+}

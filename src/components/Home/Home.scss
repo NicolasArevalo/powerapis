@@ -1,0 +1,51 @@
+.container-home {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+}
+
+.home {
+
+  display: flex;
+  flex-flow: column wrap;
+
+  height: 100%;
+  width: 70%;
+  margin: auto;
+
+  h1{
+    font-size: 3rem;
+  }
+
+  &>nav {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &>section {
+    text-align: center;
+    margin: 3rem 0;
+
+    section {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      & > *:hover{
+        /* padding-bottom: 0; */
+        border: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  
+  .home{
+    width: auto;
+    font-size: small;
+  }
+  
+}
